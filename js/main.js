@@ -37,12 +37,16 @@ let gameActive=true;
 let isPaused=false;
 
 Onload();
+
 startButtonElement.addEventListener("click", startGame);
+
 //initialization
 function startGame(){
   gameActive = true;
   startScreenElement.style.display="none";
   InputWordElement.disabled=false;
+  pauseElement.disabled = false;
+  pauseElement.style.display = "block";
   startRound();
 }
 function Onload(){
@@ -305,6 +309,8 @@ function GameOver(){
   SetHighStreak();
   clearInterval(timerId);
   InputWordElement.disabled = true;
+  pauseElement.disabled = true;
+  pauseElement.style.display = "none";
   Showrestart();
   showOverlay("Game Over!")
 }

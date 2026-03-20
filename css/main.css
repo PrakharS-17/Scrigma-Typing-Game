@@ -153,6 +153,7 @@ button:hover{
   font-weight: bold;
 }
 .Pause-container{
+  z-index: 4;
   position: absolute;
   top: 15px;
   right: 15px;
