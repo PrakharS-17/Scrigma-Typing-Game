@@ -12,3 +12,6 @@ SCRIGMA is a fast-paced typing speed game built with vanilla JavaScript, featuri
 ## Controls
 - Press ENTER to enter the word
 - Press esc to toggle Pause/Resume
+
+## Play the Game
+- https://prakhars-17.github.io/Scrigma-Typing-Game/
