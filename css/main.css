@@ -1,0 +1,234 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg,#ff8c42,#ffc857);
+  font-family: 'Franklin Gothic Medium';
+}
+button:hover{
+  transform: scale(1.05);
+}
+.gameContainer{
+  width: 420px;
+  padding: 40px;
+  background: rgba(255,255,255,0.20);
+  border: 2px solid rgba(255,255,255,0.4);
+  backdrop-filter: blur(12px);
+  border-radius: 25px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.2);
+  text-align: center;
+  position: relative;
+}
+.startscreen{
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(6px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  border-radius: 25px;
+  z-index: 10;
+}
+.startscreen h2{
+  font-family: "Jolly Lodger", system-ui;
+  font-weight: 400;
+  font-size: 70px;
+  color: #e60023;
+}
+.startbutton{
+  padding: 12px 30px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: #e60023;
+  color: white;
+}
+.startbutton .material-symbols-outlined{
+  font-size: 40px;
+  font-weight: bold;
+}
+.MainHeading{
+  color:#e60023;
+  font-family: "Jolly Lodger", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 65px;
+  margin-bottom:20px;
+}
+.headingDiv{
+  width: 100%;
+  margin-top: 20px;
+  background-color: #ffe066;
+  border: 1px solid rgba(255,255,255,0.4);
+  box-shadow:0 15px 40px rgba(0,0,0,0.2);
+  border-radius: 15px;
+  padding: 10px;
+}
+.heading{
+  color: #e36414;
+  font-size: 25px;
+  font-weight: bold;
+}
+.inputWord{
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid rgba(255,255,255,0.4);
+  box-shadow:0 15px 40px rgba(0,0,0,0.2);
+  border-radius: 15px;
+  color: #333333;
+  background-color: #f7e6d5;
+}
+.ScoreHeading{
+  display:flex;
+  align-items:center;  
+  gap:8px;             
+  justify-content:left;
+  color: #e60023;
+}
+.ScoreHeading .material-symbols-outlined{
+  font-size: 35px;
+  font-weight: bold;
+}
+.timer{
+  font-size: 30px;
+  font-weight: bold;
+}
+.timeBarContainer{
+  width: 100%;
+  height: 10px;
+  margin-top: 10px;
+  
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.timeBar{
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg,red,rgb(255, 134, 6),green);
+  transition:width 1s linear;
+}
+.stats{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+.stats p{
+  color:  #e36414;
+}
+.Restart-container{
+  position: relative;
+  z-index: 5;
+}
+.Restart
+{
+  margin-top: 20px;
+  width: 120px;
+  height: 45px;
+  background: #e60023;
+  color: #f8dbc8;
+  border: 1px solid rgba(255,255,255,0.4);
+  box-shadow:0 15px 40px rgba(0,0,0,0.15);
+  border-radius: 15px;
+  cursor: pointer;
+}
+.Restart .material-symbols-outlined{
+  font-size: 30px;
+  font-weight: bold;
+}
+.Pause-container{
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.Pause,.Resume {
+  width: 80px;
+  height: 40px;
+  color: #e36414;
+  background-color: #ffb347;
+  border: 1px solid rgba(255,255,255,0.4);
+  box-shadow:0 15px 40px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.Pause .material-symbols-outlined{
+  font-size: 40px;
+}
+.Resume .material-symbols-outlined{
+  font-size: 40px;
+}
+.feedback{
+  margin-top: 15px;
+  font-size: 24px;
+  transition: all 0.3s ease-in-out;
+}
+.comboContainer{
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  pointer-events: none;
+}
+.comboPopUp{
+  font-size: 35px;
+  font-weight: bold;
+  color:#e60023;
+  opacity: 0;
+  animation: combofloat 0.8s ease-in-out forwards;
+}
+@keyframes combofloat{
+  0%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100%{
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+.gameOverlay{
+  z-index: 2;
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(4px);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:25px;
+  opacity:0;
+  pointer-events:none;
+  transition: opacity 0.3s ease;
+}
+.overlayText{
+  font-size:50px;
+  font-weight:bold;
+  color:#e60023;
+}
+.gameOverlay.active{
+  opacity:1;
+  pointer-events:auto;
+}
+.gameOverlay.active ~ .Restart-container .Restart{
+  transform: scale(1.15);
+}
+

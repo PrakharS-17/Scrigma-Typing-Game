@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Typing Game</title>
+ <link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<div class="gameWrapper">
+  <div class="gameContainer">
+
+    <div class="startscreen">
+      <h2>SCRIGMA</h2>
+      <button class="startbutton"><span class="material-symbols-outlined">
+  play_circle
+    </span></button>
+    </div>
+
+    <h1 class="MainHeading">SCRIGMA</h1>
+
+    <div class="Pause-container">
+      <button class="Pause"><span class="material-symbols-outlined">pause</span></button>
+      <button class="Resume"><span class="material-symbols-outlined">play_arrow</span></button>
+    </div>
+
+    <div class="ScoreHeading">
+    <span class="material-symbols-outlined">
+    timer</span>
+    <span class="timer">5</span>
+    <div class="timeBarContainer">
+      <div class="timeBar"></div>
+    </div>
+    </div>
+
+    <div class="stats">
+      <p>HighScore: <span class="highScore">0</span></p>
+      <p>HighStreak: <span class="highStreak">0</span></p>
+      <p>Score: <span class="score">0</span></p>
+      <p>Streak: <span class="streak">0</span></p>
+    </div>
+    
+      <div class="gameOverlay">
+        <p class="overlayText"></p>
+      </div>
+
+     <div class="comboContainer"></div>
+    <p class="feedback"></p>
+
+    <div class="headingDiv">
+    <h1 class="heading"></h1>
+    </div>
+
+    <input class="inputWord" type="text" placeholder="enter the word">
+
+    <div class="Restart-container">
+    <button class="Restart"><span class="material-symbols-outlined">
+    restart_alt
+    </span></button>
+    </div>
+
+  </div>
+</div>
+ 
+  <script src="js/words.js"></script>
+  <script src="js/main.js"></script>
+  
+</body>
+</html>
